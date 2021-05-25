@@ -67,6 +67,7 @@ void CHeap::Initialise( u8* pRawMemory, u32 uMemorySizeInBytes )
 //////////////////////////////////////////////////////////////////////////
 void CHeap::Shutdown( void )
 {
+	delete m_pMemorySpace;
 	m_pMemorySpace = nullptr;
 	m_EHeapErrorLast = EHeapError_NotInitialised;
 }
